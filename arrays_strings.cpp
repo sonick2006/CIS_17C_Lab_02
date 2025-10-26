@@ -1,81 +1,58 @@
-// Lab 02: Arrays and Strings
-// Implement a simple dynamic array (SimpleVector) and string utilities (StringUtils)
-// Follow the TODO comments to complete the implementation
-// Run the tests with: g++ arrays_strings_test.cpp -std=c++17 -I/opt/homebrew/include -L/opt/homebrew/lib -lgtest -lgtest_main -lpthread -o arrays_strings_test && ./arrays_strings_test
+// arrays_strings.cpp
+#include "arrays_strings.h"
 
-#include <iostream>
-#include <string>
-#include <cstring>
-#include <algorithm>
+// Implementations
 
-// TODO: Include any additional headers you need (e.g., <stdexcept> for exceptions)
+SimpleVector::SimpleVector() : data(nullptr), capacity(0), size(0) {}
 
-// Simple dynamic array implementation
-class SimpleVector {
-private:
-    int* data;
-    size_t capacity;
-    size_t size;
+SimpleVector::~SimpleVector() {
+    // TODO: Free the allocated memory
+}
 
-public:
-    SimpleVector() : data(nullptr), capacity(0), size(0) {}
+void SimpleVector::push_back(int value) {
+    // TODO: Implement push_back with dynamic resizing
+    // Double capacity if needed, copy data, add value
+}
 
-    ~SimpleVector() {
-        // TODO: Free the allocated memory
-    }
+int& SimpleVector::operator[](size_t index) {
+    // TODO: Return reference to data[index]
+}
 
-    void push_back(int value) {
-        // TODO: Implement push_back with dynamic resizing
-        // Double capacity if needed, copy data, add value
-    }
+size_t SimpleVector::getSize() const {
+    // TODO: Return size
+}
 
-    int& operator[](size_t index) {
-        // TODO: Return reference to data[index]
-    }
+bool SimpleVector::empty() const {
+    // TODO: Return true if size == 0
+}
 
-    size_t getSize() const {
-        // TODO: Return size
-    }
+void SimpleVector::clear() {
+    // TODO: Set size to 0
+}
 
-    bool empty() const {
-        // TODO: Return true if size == 0
-    }
+int SimpleVector::pop_back() {
+    // TODO: Remove and return last element, throw if empty
+}
 
-    void clear() {
-        // TODO: Set size to 0
-    }
+// StringUtils implementations
 
-    int pop_back() {
-        // TODO: Remove and return last element, throw if empty
-    }
-};
+std::string StringUtils::reverse(const std::string& str) {
+    // TODO: Reverse the string
+}
 
-// String utility functions
-class StringUtils {
-public:
-    static std::string reverse(const std::string& str) {
-        // TODO: Reverse the string
-    }
+bool StringUtils::isPalindrome(const std::string& str) {
+    // TODO: Check if palindrome (normalize input)
+}
 
-    static bool isPalindrome(const std::string& str) {
-        // TODO: Check if palindrome (normalize input)
-    }
+int StringUtils::countWords(const std::string& str) {
+    // TODO: Count words in string
+}
 
-    static int countWords(const std::string& str) {
-        // TODO: Count words in string
-    }
+std::string StringUtils::toUpperCase(const std::string& str) {
+    // TODO: Convert to Uppercase
+}
 
-    static std::string toUpperCase(const std::string& str) {
-        // TODO: Convert to uppercase
-    }
 
-    static std::string toLowerCase(const std::string& str) {
-        // TODO: Convert to lowercase
-    }
-};
-
-int main() {
-    // TODO: Add your own test code here if needed
-    std::cout << "Implement the classes and run the tests!" << std::endl;
-    return 0;
+std::string StringUtils::toLowerCase(const std::string& str) {
+    // TODO: Convert to lowercase
 }
