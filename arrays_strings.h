@@ -5,7 +5,8 @@
 #include <iostream>
 #include <string>
 #include <cstring>
-#include <algorithm>
+#include <stdexcept>
+#include <cctype>
 
 // TODO: Include any additional headers you need (e.g., <stdexcept> for exceptions)
 
